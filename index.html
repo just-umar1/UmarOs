@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090909">
+  <meta name="description" content="UMAR.OS — an independent corner of the internet for software, ideas, and experiments.">
+  <title>UMAR.OS — Digital playground</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="ambient" aria-hidden="true"><div class="ambient-grid"></div><div class="ambient-orbit orbit-a"></div><div class="ambient-orbit orbit-b"></div><canvas id="starfield"></canvas></div>
+  <header class="site-header" id="top">
+    <a class="wordmark" href="#top" aria-label="UMAR.OS home"><span class="wordmark-icon">U<span>.</span></span><span>UMAR<span class="wordmark-muted">.OS</span></span></a>
+    <nav class="desktop-nav" aria-label="Main navigation"><a href="#about">About</a><a href="#projects">Projects</a><a href="#playground">Playground</a><a href="#contact">Contact</a></nav>
+    <div class="header-tools"><time class="local-time" id="local-time" aria-label="Your local time">--:--</time><button class="theme-button" id="theme-toggle" type="button" aria-label="Switch to light theme" title="Toggle color theme"><span class="theme-glyph" aria-hidden="true">◐</span></button><button class="menu-button" id="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open navigation"><span></span><span></span></button></div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Mobile navigation" hidden><a href="#about">About <span>01</span></a><a href="#projects">Projects <span>02</span></a><a href="#playground">Playground <span>03</span></a><a href="#contact">Contact <span>04</span></a></nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section-wrap" aria-labelledby="hero-title">
+      <div class="hero-copy"><p class="status-line"><i></i> INDEPENDENT DEVELOPER <b>·</b> DIGITAL EXPLORER</p>
+        <h1 id="hero-title">Building things<br>for the <span>internet<span class="period">.</span></span></h1>
+        <p class="hero-description">A personal corner of the web where code, ideas, and experiments come together.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#projects">EXPLORE PROJECTS <span aria-hidden="true">↘</span></a><a class="button button-quiet" href="#playground">ENTER THE PLAYGROUND <span aria-hidden="true">↗</span></a></div>
+      </div>
+      <div class="hero-side"><div class="hero-coordinate">PK / 00.00°N<br><span>AVAILABLE FOR IDEAS</span></div><div class="hero-terminal" aria-label="Live status message"><div class="hero-terminal-top"><span><i></i><i></i><i></i></span><span>STATUS_FEED.TXT</span><span>01—04</span></div><p><span class="terminal-prompt">&gt;</span> <span id="status-message">Building something new.</span><i class="hero-cursor" aria-hidden="true"></i></p><div class="hero-terminal-bottom"><span>SESSION: OPEN</span><span class="mini-wave" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div></div><p class="hero-side-note">A small signal<br>from the internet.</p></div>
+      <div class="hero-index"><span>SCROLL TO EXPLORE</span><span class="scroll-line"></span><span>00 — 04</span></div>
+      <div class="hero-edition">PERSONAL WEBSITE / EST. ALWAYS IN PROGRESS</div>
+    </section>
+
+    <section class="about section-wrap section-block" id="about" aria-labelledby="about-title">
+      <div class="section-marker"><span>01 / ABOUT</span><span class="marker-line"></span><span>THE PERSON BEHIND THE PIXELS</span></div>
+      <div class="about-grid"><div class="section-heading"><p class="eyebrow">A WORK IN PROGRESS, LIKE THE REST OF US</p><h2 id="about-title">Curious<br>by <em>default.</em></h2></div><div class="about-copy"><p class="about-lede">I’m <span id="creator-name">Umar</span> — a developer who likes finding out what happens when an idea meets a keyboard.</p><p>I enjoy building software, exploring Linux, experimenting with interfaces, and turning loose thoughts into things that work. This site is part portfolio, part sandbox, and part reminder to keep making things.</p><div class="interest-list" aria-label="Interests"><span>Software development</span><span>Linux & open source</span><span>Interface design</span><span>Creative experiments</span><span>Useful digital products</span></div></div></div>
+      <div class="about-foot"><span>NO FIXED DESTINATION.</span><span>JUST FOLLOWING CURIOSITY <b>↗</b></span></div>
+    </section>
+
+    <section class="projects section-wrap section-block" id="projects" aria-labelledby="projects-title">
+      <div class="section-marker"><span>02 / SELECTED WORK</span><span class="marker-line"></span><span>CONCEPTS & EXPERIMENTS</span></div>
+      <div class="projects-heading"><div><p class="eyebrow">A FEW OPEN TABS, MADE REAL</p><h2 id="projects-title">Things I’ve been<br><em>building.</em></h2></div><p class="section-aside">Ideas are better when they leave<br>the notes app.</p></div>
+      <div class="project-grid" id="project-grid"></div>
+    </section>
+
+    <section class="playground section-wrap section-block" id="playground" aria-labelledby="playground-title">
+      <div class="section-marker"><span>03 / PLAYGROUND</span><span class="marker-line"></span><span>SAFE MODE / BROWSER ONLY</span></div>
+      <div class="playground-heading"><div><p class="eyebrow">A FEW THINGS TO POKE AT</p><h2 id="playground-title">Go ahead.<br><em>Try something.</em></h2></div><p class="section-aside">A tiny command line for this little corner<br>of the web. No actual shell, promise.</p></div>
+      <div class="playground-grid">
+        <div class="terminal-window"><div class="terminal-titlebar"><div class="terminal-lights" aria-hidden="true"><i></i><i></i><i></i></div><span>UMAR.OS / INTERACTIVE SHELL</span><span class="terminal-online"><i></i> CLIENT SIDE</span></div><div class="terminal-welcome"><span class="welcome-mark">U<span>.</span></span><div><strong>Welcome, visitor.</strong><p>Commands run inside this website. Nothing touches your system.</p></div></div><div class="terminal-examples" aria-label="Example commands"><span>TRY</span><button type="button" data-command="help">help</button><button type="button" data-command="neofetch">neofetch</button><button type="button" data-command="fortune">fortune</button><button type="button" data-command="matrix">matrix</button></div><div class="terminal-output" id="terminal-output" role="log" aria-live="polite" aria-relevant="additions text"></div><div class="matrix-stage" id="matrix-stage" aria-hidden="true" hidden></div><form class="terminal-form" id="terminal-form"><label for="terminal-input"><span>visitor@umar-os</span>:<span>~</span>$</label><input id="terminal-input" name="command" type="text" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Enter a website command"><span class="input-cursor" aria-hidden="true"></span></form><div class="terminal-foot"><span>TYPE <kbd>HELP</kbd> TO SEE WHAT’S POSSIBLE</span><span><kbd>↑</kbd> <kbd>↓</kbd> HISTORY</span></div></div>
+        <aside class="playground-side"><div class="side-kicker"><span class="side-number">A.</span><div><p class="eyebrow">A SMALL COLLECTION</p><h3>Digital garden</h3></div></div><p class="side-description">Loose thoughts, growing in public. Pick one to see where it goes.</p><div class="garden-list" id="garden-list"></div><div class="side-divider"></div><div class="side-kicker idea-kicker"><span class="side-number">B.</span><div><p class="eyebrow">CREATIVE FUEL</p><h3>Random idea</h3></div></div><p class="side-description">Three ingredients. One tiny project. Make it yours.</p><div class="idea-result" id="idea-result" aria-live="polite"><span>PRESS THE BUTTON. GET A PROMPT.</span></div><button class="button idea-button" id="generate-idea" type="button">GENERATE AN IDEA <span aria-hidden="true">↻</span></button></aside>
+      </div>
+    </section>
+
+    <section class="contact section-wrap section-block" id="contact" aria-labelledby="contact-title">
+      <div class="section-marker"><span>04 / CONTACT</span><span class="marker-line"></span><span>OPEN CHANNEL</span></div>
+      <div class="contact-grid"><div><p class="eyebrow">GOOD IDEAS START SOMEWHERE</p><h2 id="contact-title">Have an<br>interesting <em>idea?</em></h2></div><div class="contact-copy"><p>I’m always interested in exploring interesting projects and ideas.</p><div id="contact-details" class="contact-details"></div><div class="social-list" id="social-list"></div></div></div>
+      <div class="contact-bottom"><span>NO FORMS. NO FUNNEL. JUST A CONVERSATION.</span><span>YOUR MOVE <b>↗</b></span></div>
+    </section>
+  </main>
+  <footer class="site-footer"><a class="footer-wordmark" href="#top">UMAR<span>.OS</span></a><span class="footer-note">An independent corner of the internet.</span><span class="footer-meta">© <span id="year"></span> <i class="hosting-dot"></i><span id="hosting-status">CHECKING HOST</span></span><a href="#top" class="back-top">BACK TO TOP ↑</a></footer>
+
+  <dialog class="garden-dialog" id="garden-dialog" aria-labelledby="garden-title"><div class="dialog-top"><span class="eyebrow">FIELD NOTE <span id="garden-number"></span></span><button type="button" class="dialog-close" aria-label="Close note">×</button></div><h2 id="garden-title"></h2><p id="garden-description"></p><div class="dialog-bottom"><span>AN IDEA, STILL GROWING</span><span>UMAR.OS / GARDEN</span></div></dialog>
+  <div class="sr-only" id="announcement" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
