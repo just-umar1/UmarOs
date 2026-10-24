@@ -1,0 +1,1 @@
+export default function Loading(){return <main id="main-content" className="page-width app-loading" aria-busy="true" aria-live="polite"><span className="eyebrow">UMAR.OS / LOADING</span><div className="loading-bar"><i/></div><p>Getting things ready…</p></main>;}

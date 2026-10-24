@@ -1,0 +1,3 @@
+import type { ReactNode } from 'react';
+import { SiteHeader } from '@/components/site-header';import { SiteFooter } from '@/components/site-footer';import { requireUser } from '@/lib/auth';import { ConfigNotice } from '@/components/config-notice';import { isSupabaseConfigured } from '@/lib/config';
+export default async function DashboardLayout({children}:{children:ReactNode}){if(!isSupabaseConfigured)return <><SiteHeader dashboard/><main id="main-content" className="page-width content-page"><ConfigNotice/></main><SiteFooter/></>;await requireUser();return <><SiteHeader dashboard/><main id="main-content" className="dashboard-main page-width">{children}</main><SiteFooter/></>;}

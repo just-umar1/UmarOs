@@ -1,0 +1,3 @@
+'use client';
+import { useState } from 'react';
+export function ShareActions({url}:{url:string}){const [message,setMessage]=useState('');async function share(){try{if(navigator.share)await navigator.share({url,title:'Developer portfolio'});else {await navigator.clipboard.writeText(url);setMessage('Link copied.');}}catch{setMessage('Sharing cancelled or unavailable.');}}return <div className="share-actions"><button type="button" onClick={async()=>{try{await navigator.clipboard.writeText(url);setMessage('Link copied.');}catch{setMessage('Copy unavailable. Select the address from the browser.');}}}>Copy link</button><button type="button" onClick={share}>Share portfolio</button>{message&&<span role="status">{message}</span>}</div>;}

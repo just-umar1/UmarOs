@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export function SiteFooter() { return <footer className="site-footer"><Link className="brand" href="/"><span className="brand-mark">U<span>.</span></span><span>UMAR<span className="muted">.OS</span></span></Link><span>Build once. Publish. Share anywhere.</span><nav aria-label="Footer"><Link href="/explore">Explore</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link></nav><small>© {new Date().getFullYear()} UMAR.OS</small></footer>; }

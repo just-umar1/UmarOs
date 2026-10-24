@@ -1,0 +1,2 @@
+import { requireUser } from '@/lib/auth';import { OnboardingWizard } from '@/components/onboarding-wizard';export const dynamic='force-dynamic';
+export default async function Onboarding(){const {supabase,user}=await requireUser('/dashboard/onboarding');const [{data:profile},{data:settings}]=await Promise.all([supabase.from('profiles').select('*').eq('id',user.id).maybeSingle(),supabase.from('portfolio_settings').select('*').eq('owner_id',user.id).maybeSingle()]);return <OnboardingWizard userId={user.id} profile={profile||{}} settings={settings||{}}/>;}

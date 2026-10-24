@@ -1,0 +1,2 @@
+import { requireUser } from '@/lib/auth';import { AccountSettings } from '@/components/account-settings';export const dynamic='force-dynamic';export const metadata={title:'Account settings'};
+export default async function Settings(){const {user}=await requireUser('/dashboard/settings');return <><div className="dash-page-title"><div><p className="eyebrow">ACCOUNT / CONTROL</p><h1>Your account, your call.</h1><p>Manage account access and review what is public.</p></div></div><AccountSettings email={user.email||'Verified account'} userId={user.id}/></>;}

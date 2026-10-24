@@ -1,0 +1,1 @@
+export function ConfigNotice() { return <div className="notice notice-warning" role="status"><strong>Backend setup needed</strong><p>This workspace is ready to connect to Supabase. Add the project URL and publishable key to <code>.env.local</code>, then apply the migration in <code>supabase/migrations</code>.</p><span>See the README for setup steps.</span></div>; }

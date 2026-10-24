@@ -1,0 +1,2 @@
+'use client';
+export default function ErrorPage({error,reset}:{error:Error&{digest?:string};reset:()=>void}){void error;return <main id="main-content" className="page-width error-page" role="alert"><p className="eyebrow">SOMETHING DIDN’T LOAD</p><h1>Let’s try that again.</h1><p>This page hit an unexpected error. Try loading it again.</p><button className="button" onClick={()=>reset()}>Retry <span>↻</span></button></main>;}
